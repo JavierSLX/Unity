@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float jumpForce = 5f;
-    public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo
+    public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo (definida en Unity)
     private Rigidbody2D rigidbody;
 
     //En el Awake se obtienen y configuran en el away
