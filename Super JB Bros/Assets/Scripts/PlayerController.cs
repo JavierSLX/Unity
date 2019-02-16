@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float jumpForce = 5f;
+    public float runningSpeed = 1.5f;
     public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo (definida en Unity)
+    public Animator animator; //Obtiene la animación y los parametros que contiene para los cambios de estado del personaje
     private Rigidbody2D rigidbody;
 
     //En el Awake se obtienen y configuran en el away
@@ -18,10 +20,12 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-		
+        //Arranca el estado inicial de la animación
+        animator.SetBool("isAlive", true);
+        animator.SetBool("isGrounded", true);
 	}
 	
-	// Update is called once per frame
+	// Actualiza una vez por frame
 	void Update ()
     {
 		//Checa si se presionó Espacio para saltar
@@ -29,7 +33,38 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        //Cambia el estado de la animación dependiendo si el personaje está en el aire o en el suelo
+        animator.SetBool("isGrounded", IsTouchingTheGround());
 	}
+
+    //Actualiza cada cierto tiempo fijo siempre (Parecido a Update pero en lugar de frames es por tiempo)
+    private void FixedUpdate()
+    {
+        //Al presionar la tecla de la flecha a la derecha se mueve el personaje
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            //Verifica 
+            if (rigidbody.velocity.x < runningSpeed)
+            {
+                //Toma la velocidad de x y y
+                rigidbody.velocity = new Vector2(runningSpeed,  //Velocidad en el eje de las X 
+                    rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+            }
+        }
+
+        //Al presionar la tecla de la flecha a la izquierda se mueve el personaje
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            //Verifica 
+            if (rigidbody.velocity.x > -runningSpeed)
+            {
+                //Toma la velocidad de x y y
+                rigidbody.velocity = new Vector2(-runningSpeed,  //Velocidad en el eje de las X 
+                    rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+            }
+        }
+    }
 
     //Metodo que se encarga del salto
     private void Jump()
