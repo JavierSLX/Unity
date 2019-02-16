@@ -61,12 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Low_Swordman\Demo\Scripts\Swordman.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SwordManController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Unity/Super JB Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

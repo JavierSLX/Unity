@@ -604,13 +604,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1087877568}
-  - component: {fileID: 1087877567}
-  - component: {fileID: 1087877566}
   - component: {fileID: 1087877569}
+  - component: {fileID: 1087877566}
   - component: {fileID: 1087877565}
+  - component: {fileID: 1087877567}
   m_Layer: 0
   m_Name: sword_man
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -654,8 +654,7 @@ Rigidbody2D:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95898481864777010, guid: 6877fb649746c674d8fbbcf60d41892b,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087877564}
   m_Enabled: 1
@@ -663,7 +662,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6bda1f5bf4224db44b12251ff5bfe8cb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -677,7 +676,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087877564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.93, y: -0.99, z: 0}
+  m_LocalPosition: {x: -8.06, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1468576506}
@@ -694,14 +693,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1087877564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c626eec4ff9fef643b12be115095bce9, type: 3}
+  m_Script: {fileID: 11500000, guid: f613c911a15823d468c49bd4f48ad472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 10
   runningSpeed: 1.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   animator: {fileID: 1087877567}
 --- !u!1 &1290452020
 GameObject:

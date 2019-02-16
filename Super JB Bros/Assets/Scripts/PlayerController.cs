@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         //Da el salto en el eje Y (Un impulso hacia el eje) F = ma =====> a = F / m
         if(IsTouchingTheGround())
-            rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rigidbody.AddForce(Vector2.up * this.jumpForce, ForceMode2D.Impulse);
     }
 
     //Checa si el personaje está tocando el suelo
