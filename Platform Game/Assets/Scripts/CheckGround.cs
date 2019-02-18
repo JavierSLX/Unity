@@ -23,7 +23,7 @@ public class CheckGround : MonoBehaviour
     }
 
     //Cuando se sale de una colision
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         //Checa si es el suelo
         if (collision.gameObject.tag == "Ground")
