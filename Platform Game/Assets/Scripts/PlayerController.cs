@@ -75,10 +75,19 @@ public class PlayerController : MonoBehaviour
         }
 
         //Checa si saltó el personaje y agrega una fuerza hacia arriba
-        if(jump)
+        if (jump)
         {
+            //Rectifica la velocidad y genera el impulso
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
             rigidbody2D.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
         }
+    }
+
+    //Checa si el personaje desaparece de la vista
+    private void OnBecameInvisible()
+    {
+        //Regresa a la posición donde inició
+        transform.position = new Vector3(-7.25f, -2.26f, 0);
     }
 }
