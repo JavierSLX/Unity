@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\DrawSceneLine.cs" />
+    <Compile Include="Assets\Scripts\PlataformaFalling.cs" />
     <Compile Include="Assets\Scripts\PlataformaMovil.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
