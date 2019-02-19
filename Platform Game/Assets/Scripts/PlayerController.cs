@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody2D;    //Para acceder a las fisicas del personaje
     private Animator animator;      //Para acceder a las animaciones y configuraciones de estas del personaje
     private bool jump;  //Para saber si saltó
+    private bool doubleJump; //Permite el doble salto en el personaje
 
 	// Use this for initialization
 	void Start ()
@@ -32,9 +33,28 @@ public class PlayerController : MonoBehaviour
         //Definimos si toca el suelo el personaje
         animator.SetBool("Grounded", grounded);
 
+        //Para el salto de precaución
+        if(grounded)
+        {
+            doubleJump = true;
+        }
+
         //Checamos si el personaje tecleo la flecha de hacia arriba y cambia de estado cuando esté tocando el suelo
-        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
-            jump = true;
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            //Salta y permite el doble salto
+            if (grounded)
+            {
+                jump = true;
+                doubleJump = true;
+            }
+            else if(doubleJump)
+            {
+                jump = true;
+                doubleJump = false;
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -88,6 +108,6 @@ public class PlayerController : MonoBehaviour
     private void OnBecameInvisible()
     {
         //Regresa a la posición donde inició
-        transform.position = new Vector3(-7.25f, -2.26f, 0);
+        transform.position = new Vector3(-5.9f, -2.26f, 0);
     }
 }

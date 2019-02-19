@@ -45,6 +45,16 @@ public class CheckGround : MonoBehaviour
             player.transform.parent = collision.transform;
             player.grounded = true;
         }
+
+        //Checa si es una pendiente
+        if(collision.gameObject.tag == "Pendiente")
+        {
+            player.grounded = true;
+
+            //Ser obtiene la velocidad del personaje y se muestra en consola
+            Vector2 velocidad = rigidbody.velocity;
+            Debug.Log("X: " + velocidad.x + " | Y: " + velocidad.y);
+        }
     }
 
     //Cuando se sale de una colision
