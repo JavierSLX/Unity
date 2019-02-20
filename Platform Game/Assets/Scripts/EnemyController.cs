@@ -28,7 +28,6 @@ public class EnemyController : MonoBehaviour
         if (limitedSpeed > -0.01f && limitedSpeed < 0.01f)
         {
             speed = -speed;
-            Debug.Log(limitedSpeed);
             rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
         }
 
@@ -38,4 +37,19 @@ public class EnemyController : MonoBehaviour
         else if (limitedSpeed > 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
 	}
+
+    //Cuando se colisiona con el protagonista
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            float yOffset = 0.2f;   //Valor para la colision vertical (es la diferencia de distancias de y del jugador y de donde se colisionara el enemigo)
+            //Checa si la colision se está dando por arriba del enemigo
+            if ((transform.position.y + yOffset) < collision.transform.position.y)
+            {
+                //Destruye al mismo enemigo cuando colisiona con el jugador
+                Destroy(gameObject);
+            }
+        }
+    }
 }
