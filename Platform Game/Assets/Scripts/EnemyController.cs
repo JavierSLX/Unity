@@ -49,7 +49,12 @@ public class EnemyController : MonoBehaviour
             {
                 //Destruye al mismo enemigo cuando colisiona con el jugador
                 Destroy(gameObject);
+
+                //Hace que el personaje salte (Llama al metodo que se encuentra en el Script PlayerController)
+                collision.SendMessage("EnemyJump");
             }
+            else
+                collision.SendMessage("EnemyKnockBack", transform.position.x);
         }
     }
 }

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;      //Para acceder a las animaciones y configuraciones de estas del personaje
     private bool jump;  //Para saber si saltó
     private bool doubleJump; //Permite el doble salto en el personaje
+    private bool movement = true;
+    private SpriteRenderer sprite;  //Obtiene el Sprite que está usando el personaje
 
 	// Use this for initialization
 	void Start ()
@@ -22,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
         //Obtenemos las animaciones
         animator = GetComponent<Animator>();
+
+        //Obtenemos el sprite
+        sprite = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -61,6 +66,9 @@ public class PlayerController : MonoBehaviour
     {
         //Cuando se presiona una tecla que haga mover en horizontal al personaje (Negativo a la izquierda, positivo a la derecha)
         float horizontal = Input.GetAxis("Horizontal");
+
+        if (!movement)
+            horizontal = 0;
 
         //Realiza el movimiento del personaje
         rigidbody2D.AddForce(Vector2.right * speed * horizontal);
@@ -109,5 +117,38 @@ public class PlayerController : MonoBehaviour
     {
         //Regresa a la posición donde inició
         transform.position = new Vector3(-5.9f, -2.26f, 0);
+    }
+
+    //Cuando se le pisa a un enemigo, el personaje brinca
+    public void EnemyJump()
+    {
+        jump = true;
+    }
+
+    //Metodo que se llama cuando el enemigo provoca un retroceso al personaje (daño)
+    public void EnemyKnockBack(float enemyPosX)
+    {
+        jump = true;
+
+        //Devuelve -1, 0 o 1 dependiendo del lado donde resulte (Negativo - Izquierda, Positivo - Derecha)
+        float side = Mathf.Sign(enemyPosX - transform.position.x);
+
+        //Aplicamos la fuerza para provocar un movimiento en diagonal en la direccion contraria al enemigo
+        rigidbody2D.AddForce(Vector2.left * side * jumpPower, ForceMode2D.Impulse);
+
+        //Hace que el personaje no tenga movimiento al tener daño
+        movement = false;
+        Invoke("EnableMovement", 0.7f);
+
+        //Cambia el color del sprite para simular daño
+        Color color = new Color(255/255f, 106/255f, 0/255f);
+        sprite.color = color;
+    }
+
+    //Recupera el movimiento y el color
+    void EnableMovement()
+    {
+        movement = true;
+        sprite.color = Color.white;
     }
 }
