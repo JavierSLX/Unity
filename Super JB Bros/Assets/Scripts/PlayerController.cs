@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 	void Update ()
     {
 		//Checa si se presionó Espacio para saltar
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
