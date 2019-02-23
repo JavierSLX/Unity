@@ -8,10 +8,31 @@ public enum GameState
     MENU, IN_GAME, GAME_OVER
 }
 
+//Clase Singleton
 public class GameManager : MonoBehaviour
 {
+    //Objeto que referencia al propio GameManager
+    public static GameManager sharedInstance;
+
     //Variable para saber en que estado del juego nos encontramos, al inicio estará en el menu principal
     public GameState currentGameState = GameState.MENU;
+
+    private void Awake()
+    {
+        sharedInstance = this;
+    }
+    private void Start()
+    {
+        BackToMenu();
+    }
+
+    private void Update()
+    {
+        //Si se presiona un boton configurado llamado "Start" comienza el juego (Esto se hace para realizar multiplataforma)
+        //Hay que especificar en el Input Manager en Unity (Edit->Project Settings->Input)
+        if (Input.GetButtonDown("Start"))
+            StartGame();
+    }
 
     //Metodo encargado de iniciar el juego
     public void StartGame()

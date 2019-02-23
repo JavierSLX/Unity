@@ -28,40 +28,48 @@ public class PlayerController : MonoBehaviour
 	// Actualiza una vez por frame
 	void Update ()
     {
-		//Checa si se presionó Espacio para saltar
-        if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Jump();
-        }
+        //Si debemos dejar que salte si el juego está en InGame
+        if (GameManager.sharedInstance.currentGameState == GameState.IN_GAME)
+        { 
+                //Checa si se presionó Espacio para saltar
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetMouseButtonDown(0))
+                {
+                    Jump();
+                }
 
-        //Cambia el estado de la animación dependiendo si el personaje está en el aire o en el suelo
-        animator.SetBool("isGrounded", IsTouchingTheGround());
+            //Cambia el estado de la animación dependiendo si el personaje está en el aire o en el suelo
+            animator.SetBool("isGrounded", IsTouchingTheGround());
+        }
 	}
 
     //Actualiza cada cierto tiempo fijo siempre (Parecido a Update pero en lugar de frames es por tiempo)
     private void FixedUpdate()
     {
-        //Al presionar la tecla de la flecha a la derecha se mueve el personaje
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //Sólo se moverá si está en InGame
+        if (GameManager.sharedInstance.currentGameState == GameState.IN_GAME)
         {
-            //Verifica 
-            if (rigidbody.velocity.x < runningSpeed)
+            //Al presionar la tecla de la flecha a la derecha se mueve el personaje
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                //Toma la velocidad de x y y
-                rigidbody.velocity = new Vector2(runningSpeed,  //Velocidad en el eje de las X 
-                    rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+                //Verifica 
+                if (rigidbody.velocity.x < runningSpeed)
+                {
+                    //Toma la velocidad de x y y
+                    rigidbody.velocity = new Vector2(runningSpeed,  //Velocidad en el eje de las X 
+                        rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+                }
             }
-        }
 
-        //Al presionar la tecla de la flecha a la izquierda se mueve el personaje
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            //Verifica 
-            if (rigidbody.velocity.x > -runningSpeed)
+            //Al presionar la tecla de la flecha a la izquierda se mueve el personaje
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                //Toma la velocidad de x y y
-                rigidbody.velocity = new Vector2(-runningSpeed,  //Velocidad en el eje de las X 
-                    rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+                //Verifica 
+                if (rigidbody.velocity.x > -runningSpeed)
+                {
+                    //Toma la velocidad de x y y
+                    rigidbody.velocity = new Vector2(-runningSpeed,  //Velocidad en el eje de las X 
+                        rigidbody.velocity.y);                      //Velocidad en el eje de las Y
+                }
             }
         }
     }
