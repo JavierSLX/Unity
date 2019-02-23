@@ -5,7 +5,7 @@ using UnityEngine;
 //Script con lógica de movimiento (Asignado a Player)
 public class PlayerController : MonoBehaviour
 {
-    public float jumpForce = 5f;
+    public float jumpForce = 15f;
     public float runningSpeed = 1.5f;
     public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo (definida en Unity)
     public Animator animator; //Obtiene la animación y los parametros que contiene para los cambios de estado del personaje
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         //Arranca el estado inicial de la animación
         animator.SetBool("isAlive", true);
         animator.SetBool("isGrounded", true);
+        runningSpeed = 20f;
 	}
 	
 	// Actualiza una vez por frame
@@ -48,8 +49,12 @@ public class PlayerController : MonoBehaviour
         //Sólo se moverá si está en InGame
         if (GameManager.sharedInstance.currentGameState == GameState.IN_GAME)
         {
+            //Saca la direccion a donde se presiona la tecla de movimiento y hace mover al personaje
+            float horizontal = Input.GetAxis("Horizontal");
+            rigidbody.AddForce(Vector2.right * runningSpeed * horizontal);
+
             //Al presionar la tecla de la flecha a la derecha se mueve el personaje
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            /*if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 //Verifica 
                 if (rigidbody.velocity.x < runningSpeed)
@@ -70,7 +75,7 @@ public class PlayerController : MonoBehaviour
                     rigidbody.velocity = new Vector2(-runningSpeed,  //Velocidad en el eje de las X 
                         rigidbody.velocity.y);                      //Velocidad en el eje de las Y
                 }
-            }
+            }*/
         }
     }
 

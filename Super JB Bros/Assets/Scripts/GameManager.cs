@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
         //Hay que especificar en el Input Manager en Unity (Edit->Project Settings->Input)
         if (Input.GetButtonDown("Start"))
             StartGame();
+
+        //Botón de pausa
+        if (Input.GetButtonDown("Pause"))
+            BackToMenu();
     }
 
     //Metodo encargado de iniciar el juego
