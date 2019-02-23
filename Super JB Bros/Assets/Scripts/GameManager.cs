@@ -12,14 +12,14 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     //Objeto que referencia al propio GameManager
-    public static GameManager sharedInstance;
+    public static GameManager getInstance;
 
     //Variable para saber en que estado del juego nos encontramos, al inicio estará en el menu principal
     public GameState currentGameState = GameState.MENU;
 
     private void Awake()
     {
-        sharedInstance = this;
+        getInstance = this;
     }
     private void Start()
     {

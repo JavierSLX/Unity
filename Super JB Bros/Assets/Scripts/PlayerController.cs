@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Script con lógica de movimiento (Asignado a Player)
+//Script con lógica de movimiento (Asignado a Player y Singleton)
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController getInstance;
     public float jumpForce = 15f;
     public float runningSpeed = 1.5f;
     public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo (definida en Unity)
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        getInstance = this;
     }
 
     // Use this for initialization
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour
 	void Update ()
     {
         //Si debemos dejar que salte si el juego está en InGame
-        if (GameManager.sharedInstance.currentGameState == GameState.IN_GAME)
+        if (GameManager.getInstance.currentGameState == GameState.IN_GAME)
         { 
                 //Checa si se presionó Espacio para saltar
                 if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetMouseButtonDown(0))
@@ -47,11 +49,13 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Sólo se moverá si está en InGame
-        if (GameManager.sharedInstance.currentGameState == GameState.IN_GAME)
+        if (GameManager.getInstance.currentGameState == GameState.IN_GAME)
         {
             //Saca la direccion a donde se presiona la tecla de movimiento y hace mover al personaje
             float horizontal = Input.GetAxis("Horizontal");
             rigidbody.AddForce(Vector2.right * runningSpeed * horizontal);
+            float limitedSpeed = Mathf.Clamp(rigidbody.velocity.x, -runningSpeed, runningSpeed);
+            rigidbody.velocity = new Vector2(limitedSpeed, rigidbody.velocity.y);
 
             //Al presionar la tecla de la flecha a la derecha se mueve el personaje
             /*if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -100,5 +104,12 @@ public class PlayerController : MonoBehaviour
         }
         else
             return false;
+    }
+
+    //Mata al jugador
+    public void Kill()
+    {
+        GameManager.getInstance.GameOver();
+        this.animator.SetBool("isAlive", false);
     }
 }
