@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         //Si se presiona un boton configurado llamado "Start" comienza el juego (Esto se hace para realizar multiplataforma)
         //Hay que especificar en el Input Manager en Unity (Edit->Project Settings->Input)
-        if (Input.GetButtonDown("Start"))
+        if (Input.GetButtonDown("Start") && currentGameState != GameState.IN_GAME)
             StartGame();
 
         //Botón de pausa
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SetGameState(GameState.IN_GAME);
+        PlayerController.getInstance.StartGame();
     }
 
     //Metodo que se llamará cuando el jugador muera

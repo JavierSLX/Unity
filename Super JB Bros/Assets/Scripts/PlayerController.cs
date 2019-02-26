@@ -11,22 +11,26 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer; //Esta variable sirve para detectar la capa del suelo (definida en Unity)
     public Animator animator; //Obtiene la animación y los parametros que contiene para los cambios de estado del personaje
     private Rigidbody2D rigidbody;
+    private Vector3 startPosition;  //La posicion inicial del personaje (es guardada)
 
     //En el Awake se obtienen y configuran en el away
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         getInstance = this;
+        startPosition = this.transform.position;    //Guarda la posicion inicial del personaje
+        runningSpeed = 20f;
     }
 
-    // Use this for initialization
-    void Start ()
+    //Comienza el juego (Metodo creado por el programador)
+    public void StartGame ()
     {
         //Arranca el estado inicial de la animación
         animator.SetBool("isAlive", true);
         animator.SetBool("isGrounded", true);
-        runningSpeed = 20f;
-	}
+        this.transform.position = startPosition;
+    }
+
 	
 	// Actualiza una vez por frame
 	void Update ()
