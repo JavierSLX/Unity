@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4321114549864690}
   - component: {fileID: 212680011480154378}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_96 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4081304730762978}
   - component: {fileID: 212437868326431970}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4012484736083370}
   - component: {fileID: 212425496746425524}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4093598926878854}
   - component: {fileID: 212736195137505510}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4650803738468538}
   - component: {fileID: 212016796800502474}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4575498768742266}
   - component: {fileID: 212353640589402776}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_94 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4483121898474064}
   - component: {fileID: 61750838136029412}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4731590190566754}
   - component: {fileID: 212583166708821406}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4092262762527544}
   - component: {fileID: 212313875392922128}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_95 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252928141112398}
   - component: {fileID: 212910070577877092}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589316364823932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -318,7 +318,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1589316364823932}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

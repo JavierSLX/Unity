@@ -23,7 +23,7 @@ public class KillTrigger : MonoBehaviour
         //Si la colision se dio entre el jugador y quien contiene el script
         if(collision.tag == "Player")
         {
-            PlayerController.getInstance.Kill();
+            MarioController.getInstance.Kill();
         }
     }
 }

@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SetGameState(GameState.IN_GAME);
-        PlayerController.getInstance.StartGame();
+        MarioController.getInstance.StartGame();
     }
 
     //Metodo que se llamará cuando el jugador muera

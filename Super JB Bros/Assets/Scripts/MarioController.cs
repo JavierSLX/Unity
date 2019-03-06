@@ -10,11 +10,13 @@ public class MarioController : MonoBehaviour
     public LayerMask groundLayer;
     private Rigidbody2D rigidbody;
     private Animator animator;
-    private bool isMove;
+    private Vector3 startPosition;
+    private float altura;
 
     private void Awake()
     {
         getInstance = this;
+        startPosition = this.transform.position;
     }
 
     // Use this for initialization
@@ -27,42 +29,74 @@ public class MarioController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            Jump();
+        if (GameManager.getInstance.currentGameState == GameState.IN_GAME)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+                Jump();
 
-        if (IsTouchingTheGround())
-            animator.SetBool("isGround", true);
-        else
-            animator.SetBool("isGround", false);
+            //Saca la altura maxima del del personaje
+            if (IsTouchingTheGround())
+            {
+                animator.SetBool("isGround", true);
+                altura = transform.position.y;
+                rigidbody.gravityScale = 1;
+            }
+            else
+            {
+                animator.SetBool("isGround", false);
+                if (transform.position.y > altura)
+                    altura = transform.position.y;
+                else
+                    rigidbody.gravityScale = 1;
+            }
+        }
     }
 
     //Metodo actualizado por tiempo
     private void FixedUpdate()
     {
-        float direccion = Input.GetAxis("Horizontal");
-        if (direccion > 0f)
+        if (GameManager.getInstance.currentGameState == GameState.IN_GAME)
         {
-            if (rigidbody.velocity.x < speed)
+            float direccion = Input.GetAxis("Horizontal");
+            if (direccion > 0f)
             {
-                animator.SetBool("isMove", true);
-                rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
-                transform.localScale = new Vector3(1f, 1f, 1f);
+                if (rigidbody.velocity.x < speed)
+                {
+                    animator.SetBool("isMove", true);
+                    rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
+                    transform.localScale = new Vector3(1f, 1f, 1f);
+                }
             }
+
+            if (direccion < 0f)
+            {
+                if (rigidbody.velocity.x > -speed)
+                {
+                    animator.SetBool("isMove", true);
+                    rigidbody.velocity = new Vector2(-speed, rigidbody.velocity.y);
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }
+            }
+
+            if (direccion == 0f)
+                animator.SetBool("isMove", false);
         }
 
-        if (direccion < 0f)
-        {
-            if (rigidbody.velocity.x > -speed)
-            {
-                animator.SetBool("isMove", true);
-                rigidbody.velocity = new Vector2(-speed, rigidbody.velocity.y);
-                transform.localScale = new Vector3(-1f, 1f, 1f);
-            }
-        }
+    }
 
-        if(direccion == 0f)
-            animator.SetBool("isMove", false);
+    //Comienza el juego (Es creado por el programador
+    public void StartGame()
+    {
+        this.transform.position = startPosition;
+        animator.SetBool("isLive", true);
+        animator.SetBool("isGround", true);
+    }
 
+    //Mata al jugador
+    public void Kill()
+    {
+        GameManager.getInstance.GameOver();
+        animator.SetBool("isLive", false);
     }
 
     //Checa si el personaje está tocando el suelo
@@ -80,4 +114,6 @@ public class MarioController : MonoBehaviour
             rigidbody.AddForce(Vector2.up * this.jumpForce, ForceMode2D.Impulse);
         }
     }
+
+    
 }
