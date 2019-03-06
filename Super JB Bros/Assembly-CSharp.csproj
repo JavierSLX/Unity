@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\KillTrigger.cs" />
+    <Compile Include="Assets\Scripts\MarioController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/Super JB Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
