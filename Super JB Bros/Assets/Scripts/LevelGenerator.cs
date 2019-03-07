@@ -10,16 +10,17 @@ public class LevelGenerator : MonoBehaviour
     public Transform levelStartPoint; //Donde se encuentra el punto de inicio
     public List<LevelBlock> currentBlocks = new List<LevelBlock>(); //Los bloques que estan en la escena
 
-
     private void Awake()
     {
         getInstance = this;
+        AddLevelBlock();
+        AddLevelBlock();
+        AddLevelBlock();
     }
 
     private void Start()
     {
-        AddLevelBlock();
-        AddLevelBlock();
+        
     }
 
     //Agrega un nuevo bloque de nivel
