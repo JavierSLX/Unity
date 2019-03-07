@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script Singleton para la camara
 public class CameraFollowMario : MonoBehaviour
 {
+    public static CameraFollowMario getInstance;
     public Transform target;
     public float smoothTime = 0.3f;
     private Vector2 velocity;
@@ -11,6 +13,7 @@ public class CameraFollowMario : MonoBehaviour
 
     private void Awake()
     {
+        getInstance = this;
         posY = target.position.y + 2f;
     }
 
@@ -25,5 +28,11 @@ public class CameraFollowMario : MonoBehaviour
             //Cambia la posicion de la camara
             transform.position = new Vector3(posX, posY, transform.position.z);
         }
+    }
+
+    public void ResetCameraPosition()
+    {
+        //Cambia la posicion de la camara
+        transform.position = new Vector3(0f, posY, transform.position.z);
     }
 }

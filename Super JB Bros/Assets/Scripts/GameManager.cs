@@ -41,8 +41,18 @@ public class GameManager : MonoBehaviour
     //Metodo encargado de iniciar el juego
     public void StartGame()
     {
+        GameState estado = currentGameState;
+
         SetGameState(GameState.IN_GAME);
         MarioController.getInstance.StartGame();
+
+        //Se se inicia el juego desde un Game Over reinicia los niveles y la camara
+        if (estado == GameState.GAME_OVER)
+        {
+            CameraFollowMario.getInstance.ResetCameraPosition();
+            LevelGenerator.getInstance.RemoveAllTheBlocks();
+            LevelGenerator.getInstance.GenerateInitialBlocks();
+        }
     }
 
     //Metodo que se llamará cuando el jugador muera
