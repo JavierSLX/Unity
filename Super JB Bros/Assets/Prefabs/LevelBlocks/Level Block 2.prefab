@@ -52,6 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4939548305228628}
   - component: {fileID: 61144711367527040}
+  - component: {fileID: 114483374679487734}
   m_Layer: 0
   m_Name: ExitZone
   m_TagString: Untagged
@@ -1279,7 +1280,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034499145444654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4630556796343604}
@@ -1533,6 +1534,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61b6c817a6da88a429312897fa1c40b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114483374679487734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034499145444654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5110085058e66214993d49bb3bc92d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212040844328930682

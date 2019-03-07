@@ -13,14 +13,7 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
         getInstance = this;
-        AddLevelBlock();
-        AddLevelBlock();
-        AddLevelBlock();
-    }
-
-    private void Start()
-    {
-        
+        GenerateInitialBlocks();
     }
 
     //Agrega un nuevo bloque de nivel
@@ -40,13 +33,9 @@ public class LevelGenerator : MonoBehaviour
 
         //Si es el primero
         if(currentBlocks.Count == 0)
-        {
             spawnPosition = levelStartPoint.position;
-        }
         else
-        {
             spawnPosition = currentBlocks[currentBlocks.Count - 1].exitPoint.position;
-        }
 
         //Operacion con vectores que corrige la operacion de los escenarios
         Vector3 correction = new Vector3(spawnPosition.x - currentBlock.startPoint.position.x,
@@ -60,18 +49,22 @@ public class LevelGenerator : MonoBehaviour
     //Elimina el bloque más viejo
     public void RemoveOldestLevelBlock()
     {
-
+        LevelBlock oldestBlock = currentBlocks[0];
+        currentBlocks.Remove(oldestBlock);
+        Destroy(oldestBlock.gameObject);
     }
 
     //Quita todos los bloques del nivel
     public void RemoveAllTheBlocks()
     {
-
+        while (currentBlocks.Count > 0)
+            RemoveOldestLevelBlock();
     }
 
     //Genera los bloques iniciales del juego
     public void GenerateInitialBlocks()
     {
-
+        for (int i = 0; i < 2; i++)
+            AddLevelBlock();
     }
 }
