@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         SetGameState(GameState.IN_GAME);
         MarioController.getInstance.StartGame();
 
-        //Se se inicia el juego desde un Game Over reinicia los niveles y la camara
+        //Si se inicia el juego desde un Game Over reinicia los niveles y la camara
         if (estado == GameState.GAME_OVER)
         {
             CameraFollowMario.getInstance.ResetCameraPosition();
