@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     //Variable para saber en que estado del juego nos encontramos, al inicio estará en el menu principal
     public GameState currentGameState = GameState.MENU;
 
+    //El Canvas donde se encuentran los menús del juego
+    public Canvas menuCanvas, gameCanvas, gameOverCanvas;
+
     private void Awake()
     {
         getInstance = this;
@@ -74,14 +77,23 @@ public class GameManager : MonoBehaviour
         {
             //Escena de Unity para mostrar el menú
             case GameState.MENU:
+                menuCanvas.enabled = true;
+                gameCanvas.enabled = false;
+                gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el juego
             case GameState.IN_GAME:
+                menuCanvas.enabled = false;
+                gameCanvas.enabled = true;
+                gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el fin del juego
             case GameState.GAME_OVER:
+                menuCanvas.enabled = false;
+                gameCanvas.enabled = false;
+                gameOverCanvas.enabled = true;
                 break;
         }
 
