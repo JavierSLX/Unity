@@ -46,16 +46,13 @@ public class GameManager : MonoBehaviour
     {
         GameState estado = currentGameState;
 
-        SetGameState(GameState.IN_GAME);
+        //Reinicia la posicion de Mario, la cámara y los bloques de los niveles
         MarioController.getInstance.StartGame();
+        CameraFollowMario.getInstance.ResetCameraPosition();
+        LevelGenerator.getInstance.RemoveAllTheBlocks();
+        LevelGenerator.getInstance.GenerateInitialBlocks();
 
-        //Si se inicia el juego desde un Game Over reinicia los niveles y la camara
-        if (estado == GameState.GAME_OVER)
-        {
-            CameraFollowMario.getInstance.ResetCameraPosition();
-            LevelGenerator.getInstance.RemoveAllTheBlocks();
-            LevelGenerator.getInstance.GenerateInitialBlocks();
-        }
+        SetGameState(GameState.IN_GAME);
     }
 
     //Metodo que se llamará cuando el jugador muera
@@ -78,21 +75,21 @@ public class GameManager : MonoBehaviour
             //Escena de Unity para mostrar el menú
             case GameState.MENU:
                 menuCanvas.enabled = true;
-                gameCanvas.enabled = false;
+                //gameCanvas.enabled = false;
                 gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el juego
             case GameState.IN_GAME:
                 menuCanvas.enabled = false;
-                gameCanvas.enabled = true;
+                //gameCanvas.enabled = true;
                 gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el fin del juego
             case GameState.GAME_OVER:
                 menuCanvas.enabled = false;
-                gameCanvas.enabled = false;
+                //gameCanvas.enabled = false;
                 gameOverCanvas.enabled = true;
                 break;
         }
