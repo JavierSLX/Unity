@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4704195627363038}
   - component: {fileID: 212661028520463694}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4170741950447860}
   - component: {fileID: 212425998520215888}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_52 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4767742498472908}
   - component: {fileID: 212469273465834340}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4826230182183402}
   - component: {fileID: 212454493155024202}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4013160289859478}
   - component: {fileID: 212556037183608248}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4472307057330570}
   - component: {fileID: 212915120527943708}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4908917586082720}
   - component: {fileID: 212019410791857496}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4667019433394600}
   - component: {fileID: 212566752634825848}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329409341568774}
   - component: {fileID: 212760621880408566}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4201079966878742}
   - component: {fileID: 212462337144552464}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_52 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4654242211540882}
   - component: {fileID: 212852284494173382}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835073935599890}
   - component: {fileID: 212597828082910964}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_54 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4902789985580534}
   - component: {fileID: 212102093188936516}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_54 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4949622232964008}
   - component: {fileID: 212661651038896712}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4332639799708848}
   - component: {fileID: 212719847244261908}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4918536215827452}
   - component: {fileID: 212991128307382884}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_52 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4511052540800304}
   - component: {fileID: 212462991995076448}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_54 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4693972745269432}
   - component: {fileID: 212306050281979574}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4411274460457816}
   - component: {fileID: 212167234595227082}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458626669236042}
   - component: {fileID: 212432476579545682}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989930125489152}
   - component: {fileID: 212977584732957128}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_53 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282089093423242}
   - component: {fileID: 61557892192847006}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma larga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4492634613718744}
   - component: {fileID: 212083537565892318}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_52 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4418331282686770}
   - component: {fileID: 212888625019552512}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_54 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482878766416306}
   - component: {fileID: 212905605419708670}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_24 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1792107880432578}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

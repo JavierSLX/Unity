@@ -14,7 +14,7 @@ public class CameraFollowMario : MonoBehaviour
     private void Awake()
     {
         getInstance = this;
-        posY = target.position.y + 2f;
+        posY = transform.position.y;
     }
 
     private void FixedUpdate()

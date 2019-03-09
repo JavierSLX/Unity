@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4555657372958168}
   - component: {fileID: 212532624141591914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4617440377060372}
   - component: {fileID: 212264132039476886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_33 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4058750682792468}
   - component: {fileID: 212406221947571960}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_34 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4379659522946480}
   - component: {fileID: 212922034012425966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4209174439278234}
   - component: {fileID: 212846146972896650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4570097666422702}
   - component: {fileID: 212298397581309446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4308109482315792}
   - component: {fileID: 61434750517003320}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma Chocolate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925068052664384}
   - component: {fileID: 212842831322661900}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_34 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4635742810203798}
   - component: {fileID: 212729207210182644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_34 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4312827539022660}
   - component: {fileID: 212686362003215664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181952862101438}
   - component: {fileID: 212153476382411224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_34 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703115404217182}
   - component: {fileID: 212720278836852498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4304755783679424}
   - component: {fileID: 212185984877148064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_35 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4512610704603144}
   - component: {fileID: 212315211467883966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_33 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210222254371912}
   - component: {fileID: 212513065802468328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_34 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4619268982209472}
   - component: {fileID: 212366882540581944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4001197270212086}
   - component: {fileID: 212932386518690942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mariobros_2_35 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1268477934309240}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

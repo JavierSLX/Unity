@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4286830566087808}
   - component: {fileID: 212774164390744828}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4528118508234210}
   - component: {fileID: 212151887488812754}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4553991654772748}
   - component: {fileID: 212195706929660168}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4438267498918710}
   - component: {fileID: 212276316070053628}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4566140969801942}
   - component: {fileID: 212859222906375242}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4198483344657352}
   - component: {fileID: 212221317802564090}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4195140594702434}
   - component: {fileID: 212429739009643018}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498260137793068}
   - component: {fileID: 212549059187504476}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4655219785491672}
   - component: {fileID: 212108382436079428}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4246601069443866}
   - component: {fileID: 61966598855313108}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma Cuadrada Naranja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1884880385296630}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

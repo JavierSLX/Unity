@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\LevelBlock.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
      <Compile Include="Assets\Scripts\MarioController.cs" />
+     <Compile Include="Assets\Scripts\ObjectDeath.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Unity/Super JB Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

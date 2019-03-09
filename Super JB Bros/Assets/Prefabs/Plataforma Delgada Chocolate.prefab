@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4432477615054988}
   - component: {fileID: 212570289382615028}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_249
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4588752449183348}
   - component: {fileID: 212501788233989334}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_248
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4471151692139722}
   - component: {fileID: 212254161378983886}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_250
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4318321125891142}
   - component: {fileID: 212894812111896220}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mariobros_2_249 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4638039911755510}
   - component: {fileID: 61641254327408980}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma Delgada Chocolate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1958458347018384}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

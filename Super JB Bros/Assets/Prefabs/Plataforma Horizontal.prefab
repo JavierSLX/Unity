@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4494181707840310}
   - component: {fileID: 61374458589089292}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4868306151938846}
   - component: {fileID: 212294693550461060}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4406055687208714}
   - component: {fileID: 212603353299648040}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4344914598392178}
   - component: {fileID: 212331197721801942}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4947903815309072}
   - component: {fileID: 212876938301445050}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4795788197613962}
   - component: {fileID: 212909275446098916}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4642876222825568}
   - component: {fileID: 212791253290364394}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: mario_2_96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1207279996534716}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d55fe447fd15a4f43a480ee15664d595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
