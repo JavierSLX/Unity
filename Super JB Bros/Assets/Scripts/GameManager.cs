@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
         //Botón de pausa
         if (Input.GetButtonDown("Pause"))
             BackToMenu();
+
+        //Botón de salida del juego
+        if (Input.GetKeyDown(KeyCode.Escape))
+            ExitGame();
     }
 
     //Metodo encargado de iniciar el juego
@@ -67,6 +71,17 @@ public class GameManager : MonoBehaviour
         SetGameState(GameState.MENU);
     }
 
+    //Metodo para finalizar la ejecucion del videojuego
+    public void ExitGame()
+    {
+        //Una decision basada en la plataforma donde se va a ejecutar
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
+    }
+
     //Metodo encargado de cambiar el estado del juego
     private void SetGameState(GameState gameState)
     {
@@ -75,21 +90,21 @@ public class GameManager : MonoBehaviour
             //Escena de Unity para mostrar el menú
             case GameState.MENU:
                 menuCanvas.enabled = true;
-                //gameCanvas.enabled = false;
+                gameCanvas.enabled = false;
                 gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el juego
             case GameState.IN_GAME:
                 menuCanvas.enabled = false;
-                //gameCanvas.enabled = true;
+                gameCanvas.enabled = true;
                 gameOverCanvas.enabled = false;
                 break;
 
             //Escena de Unity para mostrar el fin del juego
             case GameState.GAME_OVER:
                 menuCanvas.enabled = false;
-                //gameCanvas.enabled = false;
+                gameCanvas.enabled = false;
                 gameOverCanvas.enabled = true;
                 break;
         }
