@@ -781,6 +781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4825374489116954}
   - component: {fileID: 114632956604635972}
+  - component: {fileID: 114900348590234928}
   m_Layer: 0
   m_Name: Level Block 6
   m_TagString: Untagged
@@ -2882,6 +2883,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 4009953045187238}
   exitPoint: {fileID: 4868882909725592}
+--- !u!114 &114900348590234928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659204444004902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bf5b3921aebae4e9ff4fd125d12c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objeto: {fileID: 1993612527621592}
 --- !u!212 &212016161926935788
 SpriteRenderer:
   m_ObjectHideFlags: 1

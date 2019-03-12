@@ -35,4 +35,14 @@ public class CameraFollowMario : MonoBehaviour
         //Cambia la posicion de la camara
         transform.position = new Vector3(0f, posY, transform.position.z);
     }
+
+    //Checa si el elemento está dentro de la camara en el eje Y
+    public bool IsObjectInCamera(Transform objeto)
+    {
+        Camera camera = GetComponent<Camera>();
+
+        //Saca la representacion del objeto en la camara
+        Vector3 objectCamara = camera.WorldToScreenPoint(objeto.position);
+        return objectCamara.y >= 0;
+    }
 }
