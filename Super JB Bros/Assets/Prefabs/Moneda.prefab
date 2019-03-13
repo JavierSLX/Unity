@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114218561842992962}
   m_Layer: 0
   m_Name: Moneda
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb49ed519330504b942d557b2131d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 1
 --- !u!212 &212408951405884152
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     //El Canvas donde se encuentran los menús del juego
     public Canvas menuCanvas, gameCanvas, gameOverCanvas;
 
+    //Contador de coleccionables
+    public int collectedObject = 0;
+
     private void Awake()
     {
         getInstance = this;
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
         LevelGenerator.getInstance.GenerateInitialBlocks();
 
         SetGameState(GameState.IN_GAME);
+        collectedObject = 0;
     }
 
     //Metodo que se llamará cuando el jugador muera
@@ -111,5 +115,12 @@ public class GameManager : MonoBehaviour
 
         //Asignamos el estado del juego
         this.currentGameState = gameState;
+    }
+
+    //Metodo que incrementa el valor del contador
+    public void CollectObject(int objectValue)
+    {
+        this.collectedObject += objectValue;
+        Debug.Log("Contador: " + collectedObject);
     }
 }

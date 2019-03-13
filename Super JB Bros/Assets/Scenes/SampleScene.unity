@@ -233,6 +233,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 2075220497}
   gameCanvas: {fileID: 2095369566}
   gameOverCanvas: {fileID: 1218077528}
+  collectedObject: 0
 --- !u!4 &92039695
 Transform:
   m_ObjectHideFlags: 0
@@ -675,7 +676,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -911,12 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allTheLevelBlocks:
-  - {fileID: 114797967303141178, guid: 6574334484347964db5de13748b3d7ed, type: 2}
   - {fileID: 114215441363351304, guid: 3c775c5a7ef64ec4f8dcbc79eb68a26b, type: 2}
-  - {fileID: 114239035882626450, guid: a8c96698dff8146419f4088cec8a8c5c, type: 2}
-  - {fileID: 114546136781994398, guid: 159ca5c09fa4e3143afa11bbf4bbbc90, type: 2}
-  - {fileID: 114598602432851142, guid: 21a1bf835b252e34e801e79e484783d2, type: 2}
-  - {fileID: 114632956604635972, guid: 46807feea70d3f743b5db4c9d8471192, type: 2}
   levelStartPoint: {fileID: 1008908307}
   currentBlocks: []
 --- !u!4 &696622882

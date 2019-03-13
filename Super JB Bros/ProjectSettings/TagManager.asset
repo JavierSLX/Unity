@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - Moneda
+  - Estrella
+  - MonedaEstrella
   layers:
   - Default
   - TransparentFX
