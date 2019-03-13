@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\ObjectDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ReloadObject.cs" />
+    <Compile Include="Assets\Scripts\ViewInGame.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/Super JB Bros/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
