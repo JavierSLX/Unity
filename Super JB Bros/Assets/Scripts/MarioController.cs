@@ -97,6 +97,11 @@ public class MarioController : MonoBehaviour
     {
         GameManager.getInstance.GameOver();
         animator.SetBool("isLive", false);
+
+        //Checa la puntuacion maxima y si es inferior lo guarda en preferencias
+        float currentMaxScore = PlayerPrefs.GetFloat("maxscore", 0f);
+        if (currentMaxScore < this.GetDistanceX())
+            PlayerPrefs.SetFloat("maxscore", this.GetDistanceX());
     }
 
     //Checa si el personaje está tocando el suelo
@@ -115,5 +120,9 @@ public class MarioController : MonoBehaviour
         }
     }
 
-    
+    //Regresa la distancia recorrida en el eje X del personaje a partir de su posicion inicial
+    public float GetDistanceX()
+    {
+        return Vector2.Distance(new Vector2(startPosition.x, 0), new Vector2(this.transform.position.x, 0));
+    }
 }
