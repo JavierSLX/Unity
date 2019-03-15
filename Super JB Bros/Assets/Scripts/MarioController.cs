@@ -12,6 +12,8 @@ public class MarioController : MonoBehaviour
     private Animator animator;
     private Vector3 startPosition;
     private float altura;
+    private int healthPoints;
+    private int forcePoints;
 
     private void Awake()
     {
@@ -90,6 +92,10 @@ public class MarioController : MonoBehaviour
         this.transform.position = startPosition;
         animator.SetBool("isLive", true);
         animator.SetBool("isGround", true);
+
+        //Le da energia y fuerza al jugador
+        this.healthPoints = 100;
+        this.forcePoints = 10;
     }
 
     //Mata al jugador
@@ -124,5 +130,24 @@ public class MarioController : MonoBehaviour
     public float GetDistanceX()
     {
         return Vector2.Distance(new Vector2(startPosition.x, 0), new Vector2(this.transform.position.x, 0));
+    }
+
+    //Agrega vida al personaje
+    public void CollectHealth(int points)
+    {
+        this.healthPoints += points;
+
+        //Condicion si se rebasa el limite de vida
+        if (this.healthPoints >= 150)
+            this.healthPoints = 150;
+    }
+
+    //Agrega fuerza al personaje
+    public void CollectForce(int points)
+    {
+        this.forcePoints += points;
+
+        if (this.forcePoints >= 25)
+            this.forcePoints = 25;
     }
 }
