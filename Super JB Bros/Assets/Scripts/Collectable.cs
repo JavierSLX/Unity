@@ -88,10 +88,12 @@ public class Collectable : MonoBehaviour
 
             case CollectableType.healthItem:
                 //Dar vida al jugador
+                MarioController.getInstance.CollectHealth(value);
                 break;
 
             case CollectableType.forceItem:
                 //Dar fuerza al jugador
+                MarioController.getInstance.CollectForce(value);
                 break;
         }
         
