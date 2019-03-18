@@ -65,7 +65,6 @@ public class MarioController : MonoBehaviour
                 if (rigidbody.velocity.x < speed)
                 {
                     animator.SetBool("isMove", true);
-                    float currentSpeed = (speed - 0.5f) * this.healthPoints / 100f;
                     rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
                     transform.localScale = new Vector3(1f, 1f, 1f);
                 }
@@ -123,15 +122,7 @@ public class MarioController : MonoBehaviour
         //Da un salto en el eje Y
         if (IsTouchingTheGround())
         {
-            if (this.forcePoints > 5)
-            {
-                this.forcePoints -= 5;
-                rigidbody.AddForce(Vector2.up * this.jumpForce * 1.5f, ForceMode2D.Impulse);
-            }
-            else
-            {
-                rigidbody.AddForce(Vector2.up * this.jumpForce, ForceMode2D.Impulse);
-            }
+            rigidbody.AddForce(Vector2.up * this.jumpForce, ForceMode2D.Impulse);
         }
     }
 
