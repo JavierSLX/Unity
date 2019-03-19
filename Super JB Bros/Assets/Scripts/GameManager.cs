@@ -121,6 +121,5 @@ public class GameManager : MonoBehaviour
     public void CollectObject(int objectValue)
     {
         this.collectedObject += objectValue;
-        Debug.Log("Contador: " + collectedObject);
     }
 }

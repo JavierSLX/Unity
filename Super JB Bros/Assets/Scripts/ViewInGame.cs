@@ -26,7 +26,9 @@ public class ViewInGame : MonoBehaviour
 
             //Obtiene el puntaje maximo
             float maxscore = PlayerPrefs.GetFloat("maxscore", 0f);
-            this.maxScoreLabel.text = "Max Score\n" + maxscore.ToString("f2");
+
+            if(maxScoreLabel != null)
+                maxScoreLabel.text = "Max Score\n" + maxscore.ToString("f2");
         }
 
         if(GameManager.getInstance.currentGameState == GameState.GAME_OVER)

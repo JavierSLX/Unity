@@ -96,6 +96,21 @@ public class MarioController : MonoBehaviour
         //Le da energia y fuerza al jugador
         this.healthPoints = 100;
         this.forcePoints = 10;
+
+        //Manda llamar la corutina
+        StartCoroutine("TirePlayer");
+    }
+
+    //Corutina que le quita salud al personaje cada segundo (Corre por frames)
+    IEnumerator TirePlayer()
+    {
+        while(this.healthPoints > 0)
+        {
+            this.healthPoints--;
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return null;
     }
 
     //Mata al jugador
@@ -108,6 +123,9 @@ public class MarioController : MonoBehaviour
         float currentMaxScore = PlayerPrefs.GetFloat("maxscore", 0f);
         if (currentMaxScore < this.GetDistanceX())
             PlayerPrefs.SetFloat("maxscore", this.GetDistanceX());
+
+        //Mata la corutina
+        StopCoroutine("TirePlayer");
     }
 
     //Checa si el personaje está tocando el suelo
@@ -149,5 +167,16 @@ public class MarioController : MonoBehaviour
 
         if (this.forcePoints >= 25)
             this.forcePoints = 25;
+    }
+
+    //Get de health y force
+    public int GetHealth()
+    {
+        return healthPoints;
+    }
+
+    public int GetForce()
+    {
+        return forcePoints;
     }
 }
