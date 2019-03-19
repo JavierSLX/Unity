@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GoombaScript.cs" />
     <Compile Include="Assets\Scripts\KillTrigger.cs" />
     <Compile Include="Assets\Scripts\LeaveZone.cs" />
     <Compile Include="Assets\Scripts\LevelBlock.cs" />
