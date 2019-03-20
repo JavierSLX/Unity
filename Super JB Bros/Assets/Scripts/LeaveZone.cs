@@ -7,7 +7,10 @@ public class LeaveZone : MonoBehaviour
     //Cuando entra un elemento con la zona
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        LevelGenerator.getInstance.AddLevelBlock();
-        LevelGenerator.getInstance.RemoveOldestLevelBlock();
+        if (collision.tag == "Player" && !collision.isTrigger)
+        {
+            LevelGenerator.getInstance.AddLevelBlock();
+            LevelGenerator.getInstance.RemoveOldestLevelBlock();
+        }
     }
 }

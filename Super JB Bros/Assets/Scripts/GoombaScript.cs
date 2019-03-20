@@ -57,10 +57,34 @@ public class GoombaScript : MonoBehaviour
 
         if(collision.tag == "Player")
         {
-            //Le provoca daño al personaje
             MarioController controller = MarioController.getInstance;
-            controller.SetHealth(controller.GetHealth() - 10);
+            
+            //Valor para la colision vertical (es la diferencia de distancias de y del jugador y de donde se colisionara el enemigo)
+            float yOffset = 0.2f;
+
+            //El personaje colisionó por la parte de arriba
+            if ((transform.position.y + yOffset) < collision.transform.position.y)
+            {
+                Hide();
+                controller.JumpByObject();
+            }
+            else
+            {
+                //Le provoca daño al personaje
+                controller.SetHealth(controller.GetHealth() - 10);
+                controller.EnemyKnockBack(transform.position.x);
+            }
         }
+    }
+
+    //Esconde al enemigo simulando que lo destruye
+    private void Hide()
+    {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+
+        CircleCollider2D[] circles = this.GetComponents<CircleCollider2D>();
+        foreach (CircleCollider2D circle in circles)
+            circle.enabled = false;
     }
 
     //Checa si el enemigo está tocando el piso

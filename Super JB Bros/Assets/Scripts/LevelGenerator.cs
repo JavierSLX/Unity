@@ -48,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
 
     //Elimina el bloque más viejo
     public void RemoveOldestLevelBlock()
-    {
+    { 
         LevelBlock oldestBlock = currentBlocks[0];
         currentBlocks.Remove(oldestBlock);
         Destroy(oldestBlock.gameObject);

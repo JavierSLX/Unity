@@ -11,14 +11,17 @@ public class MarioController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Animator animator;
     private Vector3 startPosition;
+    private SpriteRenderer sprite;
     private float altura;
     private int healthPoints;
     private int forcePoints;
+    private bool movement;
 
     private void Awake()
     {
         getInstance = this;
         startPosition = this.transform.position;
+        movement = true;
     }
 
     // Use this for initialization
@@ -26,6 +29,7 @@ public class MarioController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -64,6 +68,11 @@ public class MarioController : MonoBehaviour
         if (GameManager.getInstance.currentGameState == GameState.IN_GAME)
         {
             float direccion = Input.GetAxis("Horizontal");
+
+            //Paraliza el movimiento
+            if (!movement)
+                direccion = 0;
+
             if (direccion > 0f)
             {
                 if (rigidbody.velocity.x < speed)
@@ -171,6 +180,40 @@ public class MarioController : MonoBehaviour
 
         if (this.forcePoints >= 25)
             this.forcePoints = 25;
+    }
+
+    //Metodo que se llama cuando el enemigo provoca un retroceso en el personaje(daño)
+    public void EnemyKnockBack(float enemyPosX)
+    {
+        //Devuelve -1, 0 o 1 dependiendo del lado donde resulte (Negativo - Izquierda, Positivo - Derecha)
+        float side = Mathf.Sign(enemyPosX - transform.position.x);
+
+        //Aplicamos la fuerza para provocar un movimiento en forma parabolica en la direccion contraria al enemigo
+        rigidbody.AddForce(Vector2.left * side * jumpForce *0.5f, ForceMode2D.Impulse);
+        rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+        //Paraliza al personaje al tener daño
+        movement = false;
+        animator.SetBool("isHurt", true);
+        Invoke("EnableMovement", 0.7f);
+
+        //Cambia el color del sprite para simular daño
+        Color color = new Color(255 / 255f, 106 / 255f, 0 / 255f);
+        sprite.color = color;
+    }
+
+    //Recupera el movimiento y el color
+    private void EnableMovement()
+    {
+        movement = true;
+        animator.SetBool("isHurt", false);
+        sprite.color = Color.white;
+    }
+
+    //Salta por pisar un elemento posible
+    public void JumpByObject()
+    {
+        rigidbody.AddForce(Vector2.up * this.jumpForce * 1.75f, ForceMode2D.Impulse);
     }
 
     //Get y Set de health y force
