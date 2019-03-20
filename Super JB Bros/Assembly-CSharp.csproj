@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Scripts\DrawSceneLine.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GoombaScript.cs" />
     <Compile Include="Assets\Scripts\KillTrigger.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\MarioController.cs" />
     <Compile Include="Assets\Scripts\ObjectDeath.cs" />
+    <Compile Include="Assets\Scripts\PlatformMove.cs" />
     <Compile Include="Assets\Scripts\PlayerBar.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ReloadObject.cs" />
