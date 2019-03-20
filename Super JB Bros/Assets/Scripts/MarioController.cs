@@ -51,6 +51,10 @@ public class MarioController : MonoBehaviour
                 else
                     rigidbody.gravityScale = 1;
             }
+
+            //Si la salud es igual a 0, el personaje muere
+            if (healthPoints <= 0)
+                Kill();
         }
     }
 
@@ -169,14 +173,24 @@ public class MarioController : MonoBehaviour
             this.forcePoints = 25;
     }
 
-    //Get de health y force
+    //Get y Set de health y force
     public int GetHealth()
     {
         return healthPoints;
     }
 
+    public void SetHealth(int value)
+    {
+        healthPoints = value;
+    }
+
     public int GetForce()
     {
         return forcePoints;
+    }
+
+    public void SetForce(int value)
+    {
+        forcePoints = value;
     }
 }
